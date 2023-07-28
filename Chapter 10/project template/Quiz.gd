@@ -1,5 +1,9 @@
 extends Control
 
+# Final project template file
+# Follow along with the lesson video to complete the game.
+# Refer to the "completed project" folder for the final version.
+
 # Store references to the UI nodes so that Godot can access them via script.
 @onready var tryAgainDialog = $"Try Again Dialog"
 
