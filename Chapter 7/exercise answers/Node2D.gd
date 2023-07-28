@@ -1,10 +1,5 @@
 extends Node2D
 
-# Coding for Game Development - Exercises
-# Use this project to practice writing scripts with the expected requirements.
-# Run the scene as explained in Lesson One to check your results.
-# Sample answers can be found in the "exercise answers" project.
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Define a variable of type Car.
