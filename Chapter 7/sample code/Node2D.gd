@@ -32,13 +32,16 @@ class Person:
 			if (height != 0):
 				height = value
 			
+	# Class properties, AKA variables
 	var weight
 	var displayName
 	
+	# Class constructor - with input parameters
 	func _init(h, w, n):
 		height = h
 		weight = w
 		displayName = n
 
+	# Class method/function
 	func sayHello():
 		print("Hello, my name is %s" % displayName)
