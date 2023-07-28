@@ -1,0 +1,175 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2wmsvax8oo67"]
+
+[ext_resource type="Script" path="res://Quiz.gd" id="1_y5gns"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sh4tu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d6qkg"]
+font_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyxdm"]
+bg_color = Color(0.32549, 0.32549, 0.32549, 1)
+
+[node name="Main UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y5gns")
+
+[node name="Game Display" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Game Display"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game Display/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="Game Display/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_sh4tu")
+
+[node name="Question Text" type="Label" parent="Game Display/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Question Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status Labels" type="HBoxContainer" parent="Game Display/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Status Text" type="Label" parent="Game Display/MarginContainer/VBoxContainer/Status Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Status Text"
+label_settings = SubResource("LabelSettings_d6qkg")
+
+[node name="Score" type="Label" parent="Game Display/MarginContainer/VBoxContainer/Status Labels"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Score: 0/0"
+label_settings = SubResource("LabelSettings_d6qkg")
+horizontal_alignment = 2
+
+[node name="Choices" type="VBoxContainer" parent="Game Display/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Choice Button 1" type="Button" parent="Game Display/MarginContainer/VBoxContainer/Choices"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Choice 1"
+alignment = 0
+
+[node name="Choice Button 2" type="Button" parent="Game Display/MarginContainer/VBoxContainer/Choices"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Choice 2"
+alignment = 0
+
+[node name="Choice Button 3" type="Button" parent="Game Display/MarginContainer/VBoxContainer/Choices"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Choice 3"
+alignment = 0
+
+[node name="Choice Button 4" type="Button" parent="Game Display/MarginContainer/VBoxContainer/Choices"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Choice 4"
+alignment = 0
+
+[node name="Try Again Dialog" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -105.0
+offset_right = 205.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tyxdm")
+
+[node name="MarginContainer" type="MarginContainer" parent="Try Again Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Try Again Dialog/MarginContainer"]
+layout_mode = 2
+
+[node name="Final Score" type="Label" parent="Try Again Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Score Text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="User Prompt" type="Label" parent="Try Again Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+text = "Do you want to try again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Try Again Dialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="No Button" type="Button" parent="Try Again Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "No"
+
+[node name="Yes Button" type="Button" parent="Try Again Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Yes"
+
+[connection signal="pressed" from="Game Display/MarginContainer/VBoxContainer/Choices/Choice Button 1" to="." method="_on_choice_button_1_pressed"]
+[connection signal="pressed" from="Game Display/MarginContainer/VBoxContainer/Choices/Choice Button 2" to="." method="_on_choice_button_2_pressed"]
+[connection signal="pressed" from="Game Display/MarginContainer/VBoxContainer/Choices/Choice Button 3" to="." method="_on_choice_button_3_pressed"]
+[connection signal="pressed" from="Game Display/MarginContainer/VBoxContainer/Choices/Choice Button 4" to="." method="_on_choice_button_4_pressed"]
+[connection signal="pressed" from="Try Again Dialog/MarginContainer/VBoxContainer/HBoxContainer/No Button" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="Try Again Dialog/MarginContainer/VBoxContainer/HBoxContainer/Yes Button" to="." method="_on_yes_button_pressed"]
