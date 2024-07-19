@@ -50,14 +50,20 @@ func _ready():
 	
 	# Exercise 11: Assign an integer value to both myValue and myOtherValue
 	# and print the result of dividing one by the other.
+	myValue = 24
+	myOtherValue = 6
+	print(myValue / myOtherValue)
 	
 	# Exercise 12: Declare a constant called "SPEED_LIMIT" and assign it
 	# the value 65.
+	const SPEED_LIMIT = 65
 	
 	# Exercise 13: Declare an enum called Fruits and populate it with the values
 	# Apples, Peaches, Bananas, and Pears.
 	# (Do it at the top of the file as you cannot declare an enum within a
 	# function.
+	
+	
 	
 	# Exercise 14: Declare a variable called "fruit" and assign it a value from
 	# Fruits.
