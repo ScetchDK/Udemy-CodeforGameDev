@@ -32,12 +32,21 @@ func _ready():
 	
 	# Exercise 8: Assign an integer value to both myValue and myOtherValue
 	# and print the sum of the two variables.
+	myValue = 4
+	myOtherValue = 6
+	print (myValue + myOtherValue)
 	
 	# Exercise 9: Assign a float value to both myValue and myOtherValue
 	# and print the result of subtracting one from the other.
+	myValue = 3.14
+	myOtherValue = 3.69
+	print (myValue + myOtherValue)
 	
 	# Exercise 10: Assign an integer value to myValue and a float
 	# value to myOtherValue, then multiply them together and print the result.
+	myValue = 69
+	myOtherValue = 3.69
+	print (myValue + myOtherValue)
 	
 	# Exercise 11: Assign an integer value to both myValue and myOtherValue
 	# and print the result of dividing one by the other.
