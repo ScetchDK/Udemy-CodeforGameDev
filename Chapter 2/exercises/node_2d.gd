@@ -15,7 +15,7 @@ func _ready():
 	var myOtherValue = 4
 	
 	# Exercise 3: Print the values of these two variables to the console.
-	
+	print(myValue, myOtherValue)
 	
 	# Exercise 4: Assign an integer value to myValue.
 	
