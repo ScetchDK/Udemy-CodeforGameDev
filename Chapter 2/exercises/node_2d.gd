@@ -15,15 +15,20 @@ func _ready():
 	var myOtherValue = 4
 	
 	# Exercise 3: Print the values of these two variables to the console.
-	print(myValue, myOtherValue)
+	print(myValue)
+	print (myOtherValue)
 	
 	# Exercise 4: Assign an integer value to myValue.
+	myValue = 123
 	
 	# Exercise 5: Assign a float value to myValue.
-	
+	myValue = 3.14
+
 	# Exercise 6: Assign a boolean value to myValue.
+	myValue = true
 	
 	# Exercise 7: Assign a string value to myValue.
+	myValue = "Hello there, weird fishes"
 	
 	# Exercise 8: Assign an integer value to both myValue and myOtherValue
 	# and print the sum of the two variables.
