@@ -8,11 +8,14 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Exercise 1: Declare a variable called "myValue" with a value of 3.
+	var myValue = 3
 	
 	# Exercise 2: Declare a second variable called "myOtherValue"
 	# with a value of 4.
+	var myOtherValue = 4
 	
 	# Exercise 3: Print the values of these two variables to the console.
+	
 	
 	# Exercise 4: Assign an integer value to myValue.
 	
