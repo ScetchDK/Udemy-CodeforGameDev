@@ -63,10 +63,11 @@ func _ready():
 	# (Do it at the top of the file as you cannot declare an enum within a
 	# function.
 	
-	
+	enum FRUITS {APPLES, PEACHES, BANANAS, PEARS}
 	
 	# Exercise 14: Declare a variable called "fruit" and assign it a value from
 	# Fruits.
+	
 	
 	pass # Replace with function body.
 
