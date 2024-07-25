@@ -8,8 +8,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Declare a variable called "lives".
+	var lives
 	
 	# Write an IF statement to print "You died!" if lives is equal to zero.
+	
 	
 	# Write an IF statement to print "That was close!"
 	# if lives is less than two but greater than zero.
