@@ -16,7 +16,8 @@ func _ready():
 	
 	# Write an IF statement to print "That was close!"
 	# if lives is less than two but greater than zero.
-	
+	if (lives <= 2 and == 0):
+		print ("That was close!")
 	
 	# Write an IF statement to print "Well done!" if lives is equal to 3,
 	# or "Try again!" otherwise.
