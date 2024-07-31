@@ -28,6 +28,11 @@ func _ready():
 	
 	# Write a MATCH statement that will print "Well done!" if lives is
 	# equal to 3, and "Try again!" if lives is equal to 2.
+	match lives:
+		3: 
+			print ("Well done")
+		2:
+			print ("Try again")
 	
 	# Write a MATCH statement that will print "Well done!" if lives is
 	# equal to 3, "Try again!" if lives is equal to 2, and "Whatever!" otherwise.
