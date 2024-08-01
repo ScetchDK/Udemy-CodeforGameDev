@@ -8,6 +8,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Declare a variable called "lives".
+	@warning_ignore("unassigned_variable")
 	var lives
 	
 	# Write an IF statement to print "You died!" if lives is equal to zero.
@@ -49,5 +50,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta):
 	pass
