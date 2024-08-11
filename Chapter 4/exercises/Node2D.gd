@@ -17,6 +17,11 @@ func _ready():
 	# Write a WHILE loop that prints out the sum of every 
 	# other value from 10 to 20.
 	
+	var no = 10
+	while no <= 20:
+		print (no)
+		no = no + 2
+	
 	# Write a FOR loop that prints out the values from 0 to 10.
 	
 	# Write a FOR loop that prints out the values from 0 to 10, skipping 5.
